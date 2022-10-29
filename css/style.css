@@ -1,0 +1,118 @@
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 22rem;
+    background-color: white;
+    margin: 1.2rem;
+    border-radius: 1rem;
+}
+
+.container img{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.orderSummary{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.orderSummary h1{
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.orderSummary p{
+    font-weight: 500;
+    font-size: 1rem;
+    color: hsl(224, 23%, 55%);
+}
+
+.currentPlan{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: hsl(225, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+
+}
+
+.currentPlan .plan{
+    flex-direction: column;
+    padding-right: 1.5rem;
+}
+
+.currentPlan .plan .planName{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.currentPlan .plan .planPrice{
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+.currentPlan a:hover,
+.currentPlan a:focus{
+    text-decoration: none;
+}
+
+.orderBtn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    margin: 1rem;
+    gap: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.orderBtn .submitBtn{
+    border: none;
+    border-radius: 0.7rem;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.orderBtn .cancelBtn{
+    border: none;
+    background-color: transparent;
+    color: hsl(224, 23%, 55%);
+    cursor: pointer;
+}
+
+.orderBtn .submitBtn:hover,
+.orderBtn .submitBtn:focus{
+    background-color: hsla(245, 75%, 52%, 0.785);
+}
+
+.orderBtn .cancelBtn:hover,
+.orderBtn .cancelBtn:focus{
+    color: black;
+}
+
+@media  screen and (min-width: 769px) {
+    body{
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: 100% 50%;
+    }
+}
