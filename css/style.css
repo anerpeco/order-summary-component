@@ -1,118 +1,208 @@
-body{
+body {
     font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%);
     background-image: url(../images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
-    background-size: 100% 30%;
-    background-color: hsl(225, 100%, 94%);
+    background-size: 100% 194px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 22rem;
-    background-color: white;
-    margin: 1.2rem;
-    border-radius: 1rem;
+@media screen and (min-width: 90rem) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: 100% 27.3125rem;
+    }
 }
 
-.container img{
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-.orderSummary{
+.container {
+    width: 20.4375rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border-radius: 1.25rem;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
     text-align: center;
-    padding: 1.5rem;
+    padding-bottom: 2rem;
 }
 
-.orderSummary h1{
+@media screen and (min-width: 90rem) {
+    .container {
+        width: 28.125rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.container img {
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.container h1 {
+    font-size: 1.375rem;
     font-weight: 900;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    line-height: 1.8194rem;
+    color: hsla(223, 46%, 23%, 1);
+    margin-top: 2rem;
 }
 
-.orderSummary p{
+@media screen and (min-width: 90rem) {
+    .container h1 {
+        font-size: 1.75rem;
+        line-height: 2.3125rem;
+        margin-top: 2.8125rem;
+    }
+}
+
+.container p {
+    font-size: .9375rem;
     font-weight: 500;
-    font-size: 1rem;
-    color: hsl(224, 23%, 55%);
+    color: hsla(223, 23%, 55%, 1);
+    line-height: 1.5625rem;
+    margin-top: 1rem;
 }
 
-.currentPlan{
+@media screen and (min-width: 90rem) {
+    .container p {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        margin: 1.0625rem 3rem 0;
+    }
+}
+
+.currentPlan {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    background-color: hsl(225, 100%, 98%);
-    padding: 1.5rem;
-    border-radius: 0.7rem;
-
+    background-color: hsla(228, 100%, 99%, 1);
+    padding: 1rem;
+    border-radius: .6875rem;
+    margin: 1.5rem 1.5rem 0;
 }
 
-.currentPlan .plan{
+@media screen and (min-width: 90rem) {
+    .currentPlan {
+        padding: 1.5625rem 1.5rem;
+        margin: 1.25rem 3rem 0;
+    }
+}
+
+.currentPlan img {
+    width: 3rem;
+    margin-right: 1.25rem;
+}
+
+.currentPlan .plan {
     flex-direction: column;
-    padding-right: 1.5rem;
+    margin-right: 3.125rem;
 }
 
-.currentPlan .plan .planName{
-    font-weight: 700;
-    font-size: 1.1rem;
+@media screen and (min-width: 90rem) {
+    .currentPlan .plan {
+        margin-right: 5.875rem;
+    }
 }
 
-.currentPlan .plan .planPrice{
+.currentPlan .plan .planName {
+    font-size: .875rem;
+    font-weight: 900;
+    color: hsla(223, 46%, 23%, 1);
+    line-height: 1.1875rem;
+    margin-bottom: .1875rem;
+    margin-block-start: 0;
+}
+
+@media screen and (min-width: 90rem) {
+    .currentPlan .plan .planName {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        margin: 0 0 .375rem;
+    }
+}
+
+.currentPlan .plan .planPrice {
+    font-size: .875rem;
     font-weight: 500;
-    color: hsl(224, 23%, 55%);
+    color: hsla(224, 23%, 55%, 1);
+    line-height: 1.1875rem;
+    margin-block-start: 0;
+}
+
+@media screen and (min-width: 90rem) {
+    .currentPlan .plan .planPrice {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        margin: 0;
+    }
+}
+
+.currentPlan a {
+    font-size: .8125rem;
+    font-weight: 700;
+    line-height: 1.0625rem;
+    color: hsla(245, 75%, 52%, 1);
 }
 
 .currentPlan a:hover,
-.currentPlan a:focus{
+.currentPlan a:focus {
     text-decoration: none;
+    color: hsla(245, 83%, 68%, 1);
 }
 
-.orderBtn{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1.5rem;
-    margin: 1rem;
-    gap: 1.5rem;
-    font-weight: 700;
-    font-size: 1.1rem;
+@media screen and (min-width: 90rem) {
+    .currentPlan a {
+        font-size: .875rem;
+        line-height: 1.1875rem;
+    }
 }
 
-.orderBtn .submitBtn{
+.submitBtn {
+    display: block;
     border: none;
-    border-radius: 0.7rem;
-    background-color: hsl(245, 75%, 52%);
+    border-radius: .6875rem;
+    background-color: hsla(245, 75%, 52%, 1);
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
     color: white;
-    padding: 1rem;
+    margin: 1.5rem 1.5rem 0;
+    width: calc(100% - 3rem);
+    height: 3.125rem;
     cursor: pointer;
+    font-size: .9375rem;
+    font-weight: 900;
+    color: hsla(0, 0%, 100%, 1);
+    line-height: 1.25rem;
 }
 
-.orderBtn .cancelBtn{
+.submitBtn:hover,
+.submitBtn:focus {
+    background-color: hsla(245, 83%, 68%, 1);
+}
+
+@media screen and (min-width: 90rem) {
+    .submitBtn {
+        margin: 2rem 3rem 0;
+        width: calc(100% - 6rem);
+    }
+}
+
+.cancelBtn {
+    display: block;
     border: none;
     background-color: transparent;
-    color: hsl(224, 23%, 55%);
+    color: hsla(224, 23%, 55%, 1);
     cursor: pointer;
+    margin: 1.5rem auto 0;
+    font-size: .9375rem;
+    font-weight: 900;
+    line-height: 1.25rem;
 }
 
-.orderBtn .submitBtn:hover,
-.orderBtn .submitBtn:focus{
-    background-color: hsla(245, 75%, 52%, 0.785);
+.cancelBtn:hover,
+.cancelBtn:focus {
+    color: hsla(223, 47%, 23%, 1);
 }
 
-.orderBtn .cancelBtn:hover,
-.orderBtn .cancelBtn:focus{
-    color: black;
-}
-
-@media  screen and (min-width: 769px) {
-    body{
-        background-image: url(../images/pattern-background-desktop.svg);
-        background-size: 100% 50%;
+@media screen and (min-width: 90rem) {
+    .cancelBtn {
+        margin: 2rem auto 0;
     }
 }
